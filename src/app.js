@@ -356,9 +356,7 @@ In order to develop plugins, run the application with %cDEV=dev node-red%c`,
 }
 
 (async function() {
-  if (window.mc_environment === 'development') {
-    await import('../plugins')
-  }
+
   ReactDOM.render(<App bootstrap={bootstrap}/>, document.querySelector('#mission-control'));
 })();
 

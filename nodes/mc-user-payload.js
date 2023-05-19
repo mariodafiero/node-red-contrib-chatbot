@@ -72,6 +72,8 @@ module.exports = function(RED) {
           });
         }
 
+	      msg.response =  response.data.user.payload != null ? response.data.user.payload : {};
+        
         send(msg);
         done();
       } catch(error) {
